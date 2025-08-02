@@ -30,20 +30,6 @@ RegisterCommand("stopcam", function()
         
 end, false)
 
-RegisterCommand("cinematicshot", function(source, args)
-    local x = tonumber(args[1]) or 1.0
-    local y = tonumber(args[2]) or 2.0
-    local z = tonumber(args[3]) or 1.0
-    local RotX = tonumber(args[4]) or 0.0
-    local RotY = tonumber(args[5]) or 0.0
-    local RotZ = tonumber(args[6]) or 0.0
-    ESX.ShowNotification("Modalità Cinematica Attivata")
-    local cam = CreateCam("DEFAULT_SCRIPTED_CAMERA", true)
-    SetCamCoord(cam, x, y, z)
-    SetCamRot(cam, RotX, RotY, RotZ, 2)
-    SetCamActive(cam, true)
-    RenderScriptCams(true, false, 0, true, true)
-end, false)
 
 RegisterCommand("cinematicfollow", function()
    local playerPed = PlayerPedId()
